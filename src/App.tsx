@@ -7,7 +7,6 @@ import {
 import { IonReactRouter } from '@ionic/react-router'
 import { Redirect, Route } from 'react-router-dom'
 import Menu from './components/Menu'
-import Page from './pages/Page'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -40,6 +39,7 @@ import '@ionic/react/css/palettes/dark.system.css'
 import './theme/variables.css'
 import { Sumadora } from './pages/Sumadora'
 import { Traductor } from './pages/Traductor'
+import { Tabla } from './pages/Tabla'
 
 setupIonicReact()
 
@@ -67,6 +67,12 @@ const App: React.FC = () => {
               exact={true}
             >
               <Traductor />
+            </Route>
+            <Route
+              path='/tabla'
+              exact={true}
+            >
+              <Tabla />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
