@@ -14,14 +14,14 @@ import {
 
 import { useLocation } from 'react-router-dom'
 import {
-  archiveOutline,
-  archiveSharp,
-  heartOutline,
-  heartSharp,
-  mailOutline,
-  mailSharp,
-  paperPlaneOutline,
-  paperPlaneSharp
+  languageSharp,
+  languageOutline,
+  homeOutline,
+  calculatorOutline,
+  calculatorSharp,
+  homeSharp,
+  starOutline,
+  starSharp
 } from 'ionicons/icons'
 import './Menu.css'
 
@@ -36,26 +36,32 @@ const appPages: AppPage[] = [
   {
     title: 'Inicio',
     url: '/folder/Inicio',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    iosIcon: homeOutline,
+    mdIcon: homeSharp
   },
   {
     title: 'Sumadora',
     url: '/sumadora',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    iosIcon: calculatorOutline,
+    mdIcon: calculatorSharp
   },
   {
     title: 'Traductor',
     url: '/traductor',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    iosIcon: languageOutline,
+    mdIcon: languageSharp
+  },
+  {
+    title: 'Tabla de Multiplicar',
+    url: '/tabla',
+    iosIcon: languageOutline,
+    mdIcon: languageSharp
   },
   {
     title: 'experiencia',
     url: '/folder/experiencia',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    iosIcon: starOutline,
+    mdIcon: starSharp
   }
 ]
 
@@ -69,7 +75,7 @@ const Menu: React.FC = () => {
     >
       <IonContent>
         <IonList id='inbox-list'>
-          <IonCard className='profile-card'>
+          <IonCard className='profile-card mb-8'>
             <IonImg
               className='profile-image'
               src='/adolfo.png'
@@ -96,12 +102,13 @@ const Menu: React.FC = () => {
                   detail={false}
                 >
                   <IonIcon
+                    className='mr-3 p-2'
                     aria-hidden='true'
                     slot='start'
                     ios={appPage.iosIcon}
                     md={appPage.mdIcon}
                   />
-                  <IonLabel>{appPage.title}</IonLabel>
+                  <IonLabel className='p-2'>{appPage.title}</IonLabel>
                 </IonItem>
               </IonMenuToggle>
             )
