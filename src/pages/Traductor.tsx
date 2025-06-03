@@ -1,32 +1,26 @@
-import { IonButton, IonInput, IonTitle } from '@ionic/react'
 import { useState } from 'react'
 import { numeroALetras } from '../utils/numeroALetra'
 
 export const Traductor = () => {
   const [num, setNum] = useState(0)
 
-  const buttonTranslateHandler = () => {
-    console.log(`Traduciendo el número: ${num}`)
-  }
-
   const traduccion = numeroALetras(num)
 
   return (
-    <>
-      <IonTitle>
-        <h1>Sumadora simple</h1>
-      </IonTitle>
-      <IonInput
-        onIonChange={(e) => setNum(parseInt(e.detail.value!, 10))}
-        labelPlacement='floating'
-        label='Primer número'
-        type='number'
-      ></IonInput>
-      <IonButton onClick={buttonTranslateHandler}>Traducir</IonButton>
+    <div className='p-4'>
+      <h1>Sumadora simple</h1>
+      <div className='flex flex-col gap-4 mb-6'>
+        <input
+          className='bg-stone-800 rounded-lg p-4 focus:outline-none ring-2 focus:ring-blue-500 ring-transparent transition'
+          type='number'
+          placeholder='Primer número'
+          onChange={(e) => setNum(parseInt(e.target.value, 10))}
+        />
+      </div>
       <span>
         <h2>Traducción:</h2>
         <p>{traduccion}</p>
       </span>
-    </>
+    </div>
   )
 }
