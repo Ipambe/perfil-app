@@ -38,6 +38,8 @@ import '@ionic/react/css/palettes/dark.system.css'
 
 /* Theme variables */
 import './theme/variables.css'
+import { Sumadora } from './pages/Sumadora'
+import { Traductor } from './pages/Traductor'
 
 setupIonicReact()
 
@@ -52,13 +54,19 @@ const App: React.FC = () => {
               path='/'
               exact={true}
             >
-              <Redirect to='/folder/Inbox' />
+              <Redirect to='/folder/Inicio' />
             </Route>
             <Route
-              path='/folder/:name'
+              path='/sumadora'
               exact={true}
             >
-              <Page />
+              <Sumadora />
+            </Route>
+            <Route
+              path='/traductor'
+              exact={true}
+            >
+              <Traductor />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
