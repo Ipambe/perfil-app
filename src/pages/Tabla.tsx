@@ -1,4 +1,3 @@
-import { IonInput, IonTitle } from '@ionic/react'
 import { useState } from 'react'
 import { Header } from '../components/Header'
 
@@ -21,17 +20,19 @@ export const Tabla = () => {
         </div>
 
         <div>
+          <h2>
+            {num > 0
+              ? `Tabla de multiplicar del ${num}:`
+              : 'Introduce un número mayor a 0 para ver su tabla.'}
+          </h2>
           {num > 0 && (
-            <>
-              <h2>Tabla de multiplicar del {num}:</h2>
-              <ul>
-                {tablaMultiplicar.map((resultado, index) => (
-                  <li key={index}>
-                    {num} x {index + 1} = {resultado}
-                  </li>
-                ))}
-              </ul>
-            </>
+            <ul>
+              {tablaMultiplicar.map((resultado, index) => (
+                <li key={index}>
+                  {num} x {index + 1} = {resultado}
+                </li>
+              ))}
+            </ul>
           )}
         </div>
       </div>

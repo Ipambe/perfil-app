@@ -35,7 +35,7 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Inicio',
-    url: '/folder/Inicio',
+    url: '/',
     iosIcon: homeOutline,
     mdIcon: homeSharp
   },
@@ -75,17 +75,6 @@ const Menu: React.FC = () => {
     >
       <IonContent>
         <IonList id='inbox-list'>
-          <IonCard className='profile-card mb-8'>
-            <IonImg
-              className='profile-image'
-              src='/adolfo.png'
-              alt='Imagen de Rafael Adolfo Rosa'
-            />
-            <div>
-              <IonListHeader>Rafael Adolfo Rosa</IonListHeader>
-              <IonNote>adolforosa.dev@gmail.com</IonNote>
-            </div>
-          </IonCard>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle

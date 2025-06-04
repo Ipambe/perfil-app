@@ -40,6 +40,7 @@ import './theme/variables.css'
 import { Sumadora } from './pages/Sumadora'
 import { Traductor } from './pages/Traductor'
 import { Tabla } from './pages/Tabla'
+import { Inicio } from './pages/Inicio'
 
 setupIonicReact()
 
@@ -54,7 +55,8 @@ const App: React.FC = () => {
               path='/'
               exact={true}
             >
-              <Redirect to='/folder/Inicio' />
+              {/* <Redirect to='/folder/Inicio' /> */}
+              <Inicio />
             </Route>
             <Route
               path='/sumadora'
