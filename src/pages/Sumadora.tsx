@@ -1,4 +1,3 @@
-import { IonButton, IonInput, IonTitle } from '@ionic/react'
 import { useState } from 'react'
 import { Header } from '../components/Header'
 
@@ -29,12 +28,20 @@ export const Sumadora = () => {
             onChange={(e) => setNum2(parseInt(e.target.value, 10))}
           />
         </div>
-
-        <IonButton onClick={buttonSumaHandler}>Sumar</IonButton>
-        <span>
-          <h2>Resultado: </h2>
-          <p>{isNaN(suma) ? 'Introduce dos números' : suma}</p>
-        </span>
+        <button
+          onClick={buttonSumaHandler}
+          className='bg-blue-500 hover:!bg-blue-600 !text-white !font-semibold !py-2 !px-6 !rounded-lg !shadow !transition !mb-4'
+        >
+          Sumar
+        </button>
+        <div className='bg-stone-900 rounded-lg shadow-md p-6 mt-4'>
+          <h2 className='text-lg font-semibold text-blue-400 mb-2'>
+            Resultado:
+          </h2>
+          <p className='text-green-400 font-mono text-xl'>
+            {isNaN(suma) ? 'Introduce dos números' : suma}
+          </p>
+        </div>
       </div>
     </div>
   )

@@ -19,10 +19,14 @@ export const Traductor = () => {
             onChange={(e) => setNum(parseInt(e.target.value, 10))}
           />
         </div>
-        <span>
-          <h2>Traducción:</h2>
-          <p>{traduccion}</p>
-        </span>
+        <div className='bg-stone-900 rounded-lg shadow-md p-6 pt-2 mt-4'>
+          <h2 className='text-lg font-semibold text-blue-400 mb-2'>
+            Traducción:
+          </h2>
+          <p className='text-green-400 font-mono text-xl break-words'>
+            {traduccion}
+          </p>
+        </div>
       </div>
     </div>
   )
