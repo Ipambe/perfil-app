@@ -4,12 +4,8 @@ import {
   IonItem,
   IonLabel,
   IonList,
-  IonListHeader,
   IonMenu,
-  IonMenuToggle,
-  IonNote,
-  IonImg,
-  IonCard
+  IonMenuToggle
 } from '@ionic/react'
 
 import { useLocation } from 'react-router-dom'
@@ -21,7 +17,9 @@ import {
   calculatorSharp,
   homeSharp,
   starOutline,
-  starSharp
+  starSharp,
+  addOutline,
+  addSharp
 } from 'ionicons/icons'
 import './Menu.css'
 
@@ -42,8 +40,8 @@ const appPages: AppPage[] = [
   {
     title: 'Sumadora',
     url: '/sumadora',
-    iosIcon: calculatorOutline,
-    mdIcon: calculatorSharp
+    iosIcon: addOutline,
+    mdIcon: addSharp
   },
   {
     title: 'Traductor',
@@ -54,12 +52,12 @@ const appPages: AppPage[] = [
   {
     title: 'Tabla de Multiplicar',
     url: '/tabla',
-    iosIcon: languageOutline,
-    mdIcon: languageSharp
+    iosIcon: calculatorOutline,
+    mdIcon: calculatorSharp
   },
   {
     title: 'experiencia',
-    url: '/folder/experiencia',
+    url: '/experiencia',
     iosIcon: starOutline,
     mdIcon: starSharp
   }
