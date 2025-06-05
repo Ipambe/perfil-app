@@ -41,6 +41,7 @@ import { Sumadora } from './pages/Sumadora'
 import { Traductor } from './pages/Traductor'
 import { Tabla } from './pages/Tabla'
 import { Inicio } from './pages/Inicio'
+import { Experiencia } from './pages/Experiencia'
 
 setupIonicReact()
 
@@ -75,6 +76,12 @@ const App: React.FC = () => {
               exact={true}
             >
               <Tabla />
+            </Route>
+            <Route
+              path='/experiencia'
+              exact={true}
+            >
+              <Experiencia />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
